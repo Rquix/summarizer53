@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+</head>
+<body>
+<nav th:replace="navbar :: navbar"></nav>
+
+<div class="container" style="margin-top: 60px;">
+
+    <div th:replace="action :: action"/>
+    <div class="text text-center">
+        <p style="color: red;font-size: 51px;">Welcome to #Summarizer53!</p>
+
+        <br>
+
+        <iframe src="https://giphy.com/embed/EfHmlClbuNAGc" width="960" height="400" frameBorder="0" class="giphy-embed"
+                allowFullScreen>
+
+        </iframe>
+
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom" style="padding: 0% 5% 5% 5%;">
+                <a class="btn btn-danger btn-lg pull-right" th:href="@{'/presentation'}">Let's start</a>
+    </div>
+</div>
+
+
+</body>
+</html>

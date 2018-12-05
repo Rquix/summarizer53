@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+</head>
+<body>
+
+<div class="container" style="margin-top: 60px;">
+
+    <div th:replace="action :: action"/>
+
+    <h1>Good job!!! You clicked the button</h1>
+
+    <h3>Now get back to the presentation please...</h3>
+
+    <p th:text="'This was the exception: ' + ${message}">Error message</p>
+    <p th:text="'This was the path: ' + ${path}">Path</p>
+    <p th:text="'This was the date: ' + ${time}">Time</p>
+
+    <a class="btn btn-warning btn-lg pull-left" onclick="history.back()">Click me</a>
+
+</div>
+
+</body>
+</html>

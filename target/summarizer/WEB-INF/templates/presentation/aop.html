@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+
+    <style>
+        blockquote {
+            border: none !important;
+        }
+    </style>
+</head>
+<body>
+<nav th:replace="navbar :: navbar"></nav>
+
+<div class="container" style="margin-top: 60px;">
+
+    <div th:replace="action :: action"/>
+    <div class="text text-center">
+        <p style="color: red;font-size: 40px;" align="left">Well..!</p>
+        <p style="color: red;font-size: 40px;" align="center">This one is almost at the end...</p>
+        <p style="color: red;font-size: 40px;" align="right">Our time is almost up...</p>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 pull-right">
+
+                    <iframe src="https://giphy.com/embed/TqiwHbFBaZ4ti" width="480" height="400" frameBorder="0"
+                            class="giphy-embed img-fluid" allowFullScreen></iframe>
+                </div>
+                <div class="col-4 pull-left">
+                    <p align="left">
+
+                    <p style="text-align: center">
+                        That wasn’t so hard, right?
+                        <br>
+                        But...I still don’t see anything...
+
+                        <br>Yeah...cuz now we gotta add the exceptions to our code...
+                        <br>How do we do that you’re asking?
+                        <br>Well.... try catch all our code, or... throw some exceptions!!!
+                    </p>
+                    <br>
+                    <br>
+                    <p style="text-align: left">
+                        @RequestMapping("/error")
+                        <br> public String redirectToHome() throws MyGlobalException {
+
+                        <br> throw new MyGlobalException("This is an exception message!");
+                        <br> }
+                        <br>
+                        <br> @RequestMapping(method = method = RequestMethod.GET, value = "/helloitsme")
+                        <br> public String iveBeenWondering(){
+                        <br> try{
+                        <br> System.out.println("this is no fun...");
+                        <br> } catch(MyGlobalException ex){
+                        <br> System.out.println(ex.getMessage());
+                        <br> }
+                    <p align=“left”>
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom" style="padding: 0% 5% 5% 5%;">
+        <a class="btn btn-warning btn-lg pull-left" onclick="history.back()">Previous Page</a>
+        <a class="btn btn-danger btn-lg pull-right" th:href="@{'/presentation/finish'}">Next Page</a>
+    </div>
+</div>
+
+</body>
+</html>
+

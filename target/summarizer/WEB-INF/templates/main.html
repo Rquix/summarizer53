@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+
+    <style>
+        a {
+            color: red;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="nav navbar-nav navbar-right">
+            <a class="navbar-brand" href="http://academiadecodigo.org" target="_blank">
+                <img alt="Brand" src="http://lisboa.academiadecodigo.org/logo.png" height="60px">
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid text-center" style="padding-top: 5%">
+    <br>
+    <br>
+    <p style="font-size: 150px"><a th:href="@{'/homepage'}">&#35</a>summarizer53</p>
+    <p style="font-size: 40px">(192.168.1.220:8080/summarizer)</p>
+</div>
+</body>
+</html>

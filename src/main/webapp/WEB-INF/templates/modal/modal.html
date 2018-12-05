@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <thymeleaf th:replace="header :: header"/>
+</head>
+<body>
+<div class="container" th:fragment="modal">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">CLOSE</button>
+                    <h4 class="modal-title">This is a modal</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="color: black; text-align: center;">This is cool... I guess</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

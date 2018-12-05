@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+
+    <style>
+        blockquote {
+            border: none !important;
+        }
+    </style>
+</head>
+<body>
+<nav th:replace="navbar :: navbar"></nav>
+
+<div class="container" style="margin-top: 60px;">
+
+    <div th:replace="action :: action"/>
+    <div class="text text-center">
+        <p style="color: red;font-size: 51px;">Slide... I mean page One</p>
+        <br>
+        <br>
+        <div class="container">
+
+            <img src="https://i.imgflip.com/2o69m3.jpg" class="img-fluid" alt="Willy Wonka has your back..."/>
+            <blockquote class="blockquote text-right">
+                <p class="mb-0">"This is the very beginning of your presentation..."</p>
+                <footer class="blockquote-footer">Every presentation program <cite
+                        title="Source Title">Ever</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom" style="padding: 0% 5% 5% 5%;">
+        <a class="btn btn-warning btn-lg pull-left" onclick="history.back()">Previous Page</a>
+        <a class="btn btn-danger btn-lg pull-right" th:href="@{'/presentation/next'}">Next Page</a>
+    </div>
+</div>
+
+</body>
+</html>

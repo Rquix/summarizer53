@@ -1,0 +1,7 @@
+org/academiadecodigo/summarizer/controlers/Homepage.class
+org/academiadecodigo/summarizer/controlers/MyException.class
+org/academiadecodigo/summarizer/controlers/MainController.class
+org/academiadecodigo/summarizer/exceptions/GlobalControllerExceptionHandler.class
+org/academiadecodigo/summarizer/exceptions/MyGlobalException.class
+org/academiadecodigo/summarizer/services/MainService.class
+org/academiadecodigo/summarizer/controlers/Presentation.class

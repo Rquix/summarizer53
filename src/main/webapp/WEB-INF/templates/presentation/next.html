@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+
+    <style>
+        blockquote {
+            border: none !important;
+        }
+    </style>
+</head>
+<body>
+<nav th:replace="navbar :: navbar"></nav>
+
+<div class="container" style="margin-top: 60px;">
+
+    <div th:replace="action :: action"/>
+    <div class="text text-center">
+        <p style="color: red;font-size: 40px;" align="left">Excuse me sir..!</p>
+        <p style="color: red;font-size: 40px;" align="center">Do you have a moment to talk about Javabank?</p>
+        <p style="color: red;font-size: 40px;" align="right">Our Lord and savior</p>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <iframe src="https://giphy.com/embed/1xzmIGkPvtFba" width="480" height="270" frameBorder="0"
+                            class="giphy-embed img-fluid pull-left"></iframe>
+                </div>
+                <div class="col-4 pull-right">
+                    <p align="left">
+                        <br>
+                        <br>
+                        public void withdraw(Integer id, Integer customerId, double amount) {
+                        <br>
+                        Customer customer = customerDao.findById(customerId);
+                        <br> Account account = accountDao.findById(id);
+                        <br>
+                        <br> for (Account a : customer.getAccounts()) {
+                        <br> if (a.getId().equals(id)) {
+                        <br> a.debit(amount);
+                        <br> }
+                        <br> customerDao.saveOrUpdate(customer);
+                        <br> }
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom" style="padding: 0% 5% 5% 5%;">
+        <a class="btn btn-warning btn-lg pull-left" onclick="history.back()">Previous Page</a>
+        <a class="btn btn-danger btn-lg pull-right" th:href="@{'/presentation/modal'}">Next Page</a>
+    </div>
+</div>
+
+</body>
+</html>
